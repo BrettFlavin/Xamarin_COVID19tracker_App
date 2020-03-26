@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CoronaVirus.MainPage"
+             Title="HomePage"
+             BackgroundColor="MistyRose">
+    
+    <!-- Set the static resources -->
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="HeaderLabel" TargetType="Label">
+                <Setter Property="TextColor" Value="DarkBlue" />
+                <Setter Property="TextDecorations" Value="Underline" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontSize" Value="Large" />
+            </Style>
+            <Style x:Key="DisplayLabel" TargetType="Label">
+                <Setter Property="TextColor" Value="Red" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontSize" Value="Medium" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <StackLayout Margin="5,0,5,0">       
+        <!-- logo -->      
+        <Image Source="CoronaLogo.png"
+               HeightRequest="200"
+               WidthRequest="200"
+               Aspect="AspectFit"
+               HorizontalOptions="Center" />        
+        <!-- local time, days of outbreak, last updated labels -->
+        <Label x:Name="timelabel" 
+               Text="Local Time:" />
+        <Label x:Name="dayslabel"
+               Text="Days Since Outbreak:" />
+
+        <!-- COVID-19 data header -->
+        <Label x:Name="coronalabel" 
+               Text="Current COVID-19 Totals"
+               Style="{StaticResource HeaderLabel}"/>
+        <!-- data labels - the text for these set in code-behind -->
+        <Label x:Name="caselabel" Style="{StaticResource DisplayLabel}"/>
+        <Label x:Name="deathslabel" Style="{StaticResource DisplayLabel}" />
+        <Label x:Name="recoveredlabel" Style="{StaticResource DisplayLabel}"/>
+        <Label x:Name="lastupdatedlabel" Style="{StaticResource DisplayLabel}"/>
+    </StackLayout>
+</ContentPage>

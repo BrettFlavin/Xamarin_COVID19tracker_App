@@ -1,0 +1,13 @@
+C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus\bin\Debug\netstandard2.0\CoronaVirus.deps.json
+C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus\bin\Debug\netstandard2.0\CoronaVirus.dll
+C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus\obj\Debug\netstandard2.0\CoronaVirus.csprojAssemblyReference.cache
+C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus\obj\Debug\netstandard2.0\CoronaVirus.AssemblyInfoInputs.cache
+C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus\obj\Debug\netstandard2.0\CoronaVirus.AssemblyInfo.cs
+C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus\bin\Debug\netstandard2.0\ref\CoronaVirus.dll
+C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus\bin\Debug\netstandard2.0\CoronaVirus.pdb
+C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus\obj\Debug\netstandard2.0\CoronaVirus.dll
+C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus\obj\Debug\netstandard2.0\ref\CoronaVirus.dll
+C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus\obj\Debug\netstandard2.0\CoronaVirus.pdb
