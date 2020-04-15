@@ -5,8 +5,9 @@ using System.Text;
 namespace CoronaVirus
 {
     class CountryData
-    {
+    {       
         public string country { get; set; }
+        public int updated { get; set; }
         public int cases { get; set; }
         public int todayCases { get; set; }
         public int deaths { get; set; }
@@ -15,6 +16,7 @@ namespace CoronaVirus
         public int active { get; set; }
         public int critical { get; set; }
         public int casesPerOneMillion { get; set; }
+        public int deathsPerOneMillion { get; set; }
     }
 
     class CountryDataList

@@ -16,12 +16,11 @@
     <!-- Resource dictionary -->
     <ContentPage.Resources>
         <ResourceDictionary>
-            <Style x:Key="HeaderLabel" TargetType="Label">
-                <Setter Property="TextColor" Value="DarkRed" />
+            <Style x:Key="HeadingLabel" TargetType="Label">
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="FontSize" Value="25" />
+                <Setter Property="FontAttributes" Value="Italic" />
                 <Setter Property="TextDecorations" Value="Underline" />
-                <Setter Property="FontSize" Value="Large" />
-                <Setter Property="FontAttributes" Value="Bold" />
-                <Setter Property="HorizontalOptions" Value="Center" />
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
@@ -37,8 +36,9 @@
 
             <!-- page label -->
             <Label x:Name="country_total_label"
-                   Text="Country Totals"
-                   Style="{StaticResource HeaderLabel}"/>
+                   Text="Country Totals:"
+                   HorizontalOptions="Center"
+                   Style="{StaticResource HeadingLabel}"/>
 
             <!-- entry field to enter a country -->
             <Entry x:Name="country_entry"

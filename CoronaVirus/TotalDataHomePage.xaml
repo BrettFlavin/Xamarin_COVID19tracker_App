@@ -15,23 +15,21 @@
 
     <!-- Resource dictionary -->
     <ContentPage.Resources>
-        <ResourceDictionary>
-            <Style x:Key="HeaderLabel" TargetType="Label">
-                <Setter Property="TextColor" Value="DarkRed" />
-                <Setter Property="TextDecorations" Value="Underline" />
-                <Setter Property="FontSize" Value="Large" />
-                <Setter Property="FontAttributes" Value="Bold" />
-                <Setter Property="HorizontalOptions" Value="Center" />
-            </Style>
-            <Style x:Key="DisplayLabel" TargetType="Label">
-                <Setter Property="TextColor" Value="Red" />
-                <Setter Property="FontSize" Value="Medium" />
-                <Setter Property="FontAttributes" Value="Bold" />
-            </Style>
-            <Style x:Key="ClockLabel" TargetType="Label">
+        <ResourceDictionary>            
+            <Style x:Key="HeadingLabel" TargetType="Label">
                 <Setter Property="TextColor" Value="Black" />
                 <Setter Property="FontSize" Value="25" />
                 <Setter Property="FontAttributes" Value="Italic" />
+                <Setter Property="TextDecorations" Value="Underline" />
+            </Style>
+            <Style x:Key="DataLabel" TargetType="Label">
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+            <Style x:Key="TimeLabel" TargetType="Label">
+                <Setter Property="TextColor" Value="BlueViolet" />
+                <Setter Property="FontSize" Value="25" />
+                <Setter Property="FontAttributes" Value="Bold" />
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
@@ -40,48 +38,50 @@
         <StackLayout Margin="5,0,5,0">
             <!-- logo -->
             <Image Source="CoronaLogo.png"
-               HeightRequest="200"
-               WidthRequest="200"
-               Aspect="AspectFit"
-               HorizontalOptions="Center" />
+                   HeightRequest="150"
+                   WidthRequest="150"
+                   Aspect="AspectFit"
+                   HorizontalOptions="Center" />
 
             <!-- label for local time -->
             <StackLayout Orientation="Horizontal">
                 <Label x:Name="timelabel" 
-                   Text="Local Time: " 
-                   Style="{StaticResource ClockLabel}" />
+                       Style="{StaticResource HeadingLabel}" 
+                       Text="Local Time:" />
                 <Label x:Name="displayed_time" 
-                   Style="{StaticResource ClockLabel}" 
-                   BackgroundColor="WhiteSmoke"
-                   Opacity=".6"/>
+                       Style="{StaticResource TimeLabel}" />
             </StackLayout>
 
             <!-- label for days since outbreak began -->
             <StackLayout Orientation="Horizontal">
                 <Label x:Name="dayslabel"
-                   Text="Days Since 1st Case: "
-                   Style="{StaticResource ClockLabel}" />
+                       Style="{StaticResource HeadingLabel}" 
+                       Text="Days Since 1st Case:" />
                 <Label x:Name="displayed_days"
-                   Style="{StaticResource ClockLabel}" 
-                   BackgroundColor="WhiteSmoke" 
-                   Opacity=".6"/>
+                       Style="{StaticResource TimeLabel}" />
             </StackLayout>
 
             <!-- COVID-19 totals -->
-            <Label x:Name="coronalabel"
-               Text="Current COVID-19 Totals"
-               Style="{StaticResource HeaderLabel}"/>
+            <Label x:Name="coronalabel"                  
+                   Style="{StaticResource HeadingLabel}"
+                   Text="Current COVID-19 Totals:" 
+                   HorizontalOptions="Center"
+                   Padding="0,15,0,0"/>
 
             <!-- data labels - text set in code-behind -->
             <Label x:Name="lastupdatedlabel" 
-               Style="{StaticResource DisplayLabel}"
-               HorizontalOptions="Center" />
+                   Style="{StaticResource DataLabel}"
+                   TextColor="DarkViolet" 
+                   HorizontalOptions="Center" />
             <Label x:Name="caselabel" 
-               Style="{StaticResource DisplayLabel}" />
+                   Style="{StaticResource DataLabel}"                   
+                   TextColor="Black" />
             <Label x:Name="deathslabel" 
-               Style="{StaticResource DisplayLabel}" />
+                   Style="{StaticResource DataLabel}"                    
+                   TextColor="DarkRed" />
             <Label x:Name="recoveredlabel" 
-               Style="{StaticResource DisplayLabel}" />
+                   Style="{StaticResource DataLabel}" 
+                   TextColor="Green" />
         </StackLayout>
         
     </ContentPage.Content>

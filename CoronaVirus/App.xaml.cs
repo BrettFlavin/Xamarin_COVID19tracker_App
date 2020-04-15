@@ -23,6 +23,7 @@ namespace CoronaVirus
         // displays an alert and enables or disables buttons
         async private void Current_ConnectivityChanged(object sender, Plugin.Connectivity.Abstractions.ConnectivityChangedEventArgs e)
         {
+          
             // alert internet connected and enable buttons
             if (e.IsConnected)
             {

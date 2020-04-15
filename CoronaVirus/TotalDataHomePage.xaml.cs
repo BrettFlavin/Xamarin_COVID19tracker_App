@@ -60,46 +60,21 @@ namespace CoronaVirus
             HttpClient client = new HttpClient();
 
             // send GET request and store response in TotalData object
-            var response = await client.GetStringAsync("https://corona.lmao.ninja/all");
-            TotalData total = JsonConvert.DeserializeObject<TotalData>(response);
+            var json = await client.GetStringAsync("https://corona.lmao.ninja/all");
+            TotalData totals = JsonConvert.DeserializeObject<TotalData>(json);
 
+            // create a new DateTime object to represent 1/1/1970
+            DateTime timenow = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc);
+            
+            // the API call returns an 'updated' field with the unix time of last update 
+            // add the unix time elapsed since 1/1/1970 to get current local time
+            timenow = timenow.AddMilliseconds(totals.updated).ToLocalTime();
+            
             // set display labels with the data received 
-            caselabel.Text = ($"# of Cases: {total.cases.ToString()}");
-            deathslabel.Text = ($"# of Deaths: {total.deaths.ToString()}");
-            recoveredlabel.Text = ($"# of Recovered: {total.recovered.ToString()}");
-            lastupdatedlabel.Text = ($"Last Updated: {total.updated.ToString()}");
-        }
-
-
-        /* BUTTON CLICK EVENT OR MENU ITEM - WILL GO TO A NEW PAGE */
-
-        // a function to get Corona virus data from the API (state data) and then 
-        // display the state data sorted by highest to lowest number of cases
-        private async void SortByCountry()
-        {
-            // send API request and get response
-            HttpClient client = new HttpClient();
-            var response = await client.GetStringAsync("https://corona.lmao.ninja/states");
-            CountryDataList data = JsonConvert.DeserializeObject<CountryDataList>(response);
-
-            // set the list view item source to display each country's info
-            //listView_Country.ItemSource = data.countries;
-        }
-
-
-        /* BUTTON CLICK EVENT OR MENU ITEM - WILL GO TO A NEW PAGE */
-
-        // a function to get Corona virus data from the API (country data) and then display
-        // the country data sorted by highest to lowest number of cases
-        private async void SortByState()
-        {
-            // send API request and get response
-            HttpClient client = new HttpClient();
-            var response = await client.GetStringAsync("https://corona.lmao.ninja/countries");
-            StateDataList data = JsonConvert.DeserializeObject<StateDataList>(response);
-
-            // set the list view item source to display each state's info 
-            //listView_State.ItemSource = data.states;
-        }
+            caselabel.Text = ($"# of Cases: {totals.cases.ToString()}");
+            deathslabel.Text = ($"# of Deaths: {totals.deaths.ToString()}");
+            recoveredlabel.Text = ($"# of Recovered: {totals.recovered.ToString()}");
+            lastupdatedlabel.Text = ($"(Last Updated: {timenow})");
+        }     
     }
 }
