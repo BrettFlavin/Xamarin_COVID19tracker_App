@@ -58,3 +58,8 @@ C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus.iOS\obj\iPhoneSimulator\Debug\Xam
 C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus.iOS\obj\iPhoneSimulator\Debug\CoronaVirus.iOS.csproj.CopyComplete
 C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus.iOS\obj\iPhoneSimulator\Debug\CoronaVirus.iOS.exe
 C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus.iOS\obj\iPhoneSimulator\Debug\CoronaVirus.iOS.pdb
+C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus.iOS\bin\iPhoneSimulator\Debug\Plugin.Connectivity.Abstractions.dll
+C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus.iOS\bin\iPhoneSimulator\Debug\Plugin.Connectivity.Abstractions.pdb
+C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus.iOS\bin\iPhoneSimulator\Debug\Plugin.Connectivity.dll
+C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus.iOS\bin\iPhoneSimulator\Debug\Plugin.Connectivity.pdb
+C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus.iOS\bin\iPhoneSimulator\Debug\XFGloss.dll

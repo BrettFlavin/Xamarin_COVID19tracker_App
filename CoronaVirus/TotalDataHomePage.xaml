@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"             
+             xmlns:xfg="clr-namespace:XFGloss;assembly=XFGloss"  
+             x:Class="CoronaVirus.TotalDataHomePage">
+    
+    <!-- Implementation of XFGloss NuGet package -->
+    <xfg:ContentPageGloss.BackgroundGradient>
+        <xfg:Gradient Rotation="150">
+            <xfg:GradientStep StepColor="BlueViolet" StepPercentage="0" />
+            <xfg:GradientStep StepColor="LightSalmon" StepPercentage=".5" />
+            <xfg:GradientStep StepColor="BlueViolet" StepPercentage="1" />
+        </xfg:Gradient>
+    </xfg:ContentPageGloss.BackgroundGradient>
+
+    <!-- Resource dictionary -->
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="HeaderLabel" TargetType="Label">
+                <Setter Property="TextColor" Value="DarkRed" />
+                <Setter Property="TextDecorations" Value="Underline" />
+                <Setter Property="FontSize" Value="Large" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+            </Style>
+            <Style x:Key="DisplayLabel" TargetType="Label">
+                <Setter Property="TextColor" Value="Red" />
+                <Setter Property="FontSize" Value="Medium" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+            <Style x:Key="ClockLabel" TargetType="Label">
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="FontSize" Value="25" />
+                <Setter Property="FontAttributes" Value="Italic" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout Margin="5,0,5,0">
+            <!-- logo -->
+            <Image Source="CoronaLogo.png"
+               HeightRequest="200"
+               WidthRequest="200"
+               Aspect="AspectFit"
+               HorizontalOptions="Center" />
+
+            <!-- label for local time -->
+            <StackLayout Orientation="Horizontal">
+                <Label x:Name="timelabel" 
+                   Text="Local Time: " 
+                   Style="{StaticResource ClockLabel}" />
+                <Label x:Name="displayed_time" 
+                   Style="{StaticResource ClockLabel}" 
+                   BackgroundColor="WhiteSmoke"
+                   Opacity=".6"/>
+            </StackLayout>
+
+            <!-- label for days since outbreak began -->
+            <StackLayout Orientation="Horizontal">
+                <Label x:Name="dayslabel"
+                   Text="Days Since 1st Case: "
+                   Style="{StaticResource ClockLabel}" />
+                <Label x:Name="displayed_days"
+                   Style="{StaticResource ClockLabel}" 
+                   BackgroundColor="WhiteSmoke" 
+                   Opacity=".6"/>
+            </StackLayout>
+
+            <!-- COVID-19 totals -->
+            <Label x:Name="coronalabel"
+               Text="Current COVID-19 Totals"
+               Style="{StaticResource HeaderLabel}"/>
+
+            <!-- data labels - text set in code-behind -->
+            <Label x:Name="lastupdatedlabel" 
+               Style="{StaticResource DisplayLabel}"
+               HorizontalOptions="Center" />
+            <Label x:Name="caselabel" 
+               Style="{StaticResource DisplayLabel}" />
+            <Label x:Name="deathslabel" 
+               Style="{StaticResource DisplayLabel}" />
+            <Label x:Name="recoveredlabel" 
+               Style="{StaticResource DisplayLabel}" />
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

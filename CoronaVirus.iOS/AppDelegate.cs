@@ -23,6 +23,8 @@ namespace CoronaVirus.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            XFGloss.iOS.Library.Init();             // to Initialize XFGloss
+
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

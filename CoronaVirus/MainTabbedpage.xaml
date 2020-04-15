@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:CoronaVirus"          
+            x:Class="CoronaVirus.MainTabbedPage"
+            Title="HomePage"
+            BackgroundColor="Black"
+            Padding="10" >
+
+    <!-- MainTabbedPage has 3 child pages: 
+           - totals page (Home)
+           - country data page
+           - state data page -->
+    <local:TotalDataHomePage Title="Totals"
+                             Icon="home.png" />
+    <local:StateDataPage Title="By State"
+                         Icon="usa.png" />
+    <local:CountryDataPage Title="By Country"
+                           Icon="earth.png" />
+
+</TabbedPage>
+
+
+    
+    
+    
+
+

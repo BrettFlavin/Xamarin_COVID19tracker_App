@@ -2,6 +2,26 @@
   "version": 3,
   "targets": {
     "Xamarin.iOS,Version=v1.0": {
+      "Ansuria.XFGloss/1.1.3": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.5.0.280555"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "System.Net.Http",
+          "System.Xml",
+          "System.Xml.Linq",
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/XFGloss.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/XFGloss.dll": {}
+        }
+      },
       "Newtonsoft.Json/12.0.3": {
         "type": "package",
         "compile": {
@@ -42,6 +62,17 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "Xam.Plugin.Connectivity/3.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Plugin.Connectivity.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.Connectivity.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Plugin.Connectivity.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.Connectivity.dll": {}
+        }
+      },
       "Xamarin.Essentials/1.3.1": {
         "type": "package",
         "dependencies": {
@@ -184,8 +215,10 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Ansuria.XFGloss": "1.1.3",
           "Newtonsoft.Json": "12.0.3",
           "System.Net.Http": "4.3.4",
+          "Xam.Plugin.Connectivity": "3.2.0",
           "Xamarin.Essentials": "1.3.1",
           "Xamarin.Forms": "4.3.0.908675"
         },
@@ -198,6 +231,26 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win": {
+      "Ansuria.XFGloss/1.1.3": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.5.0.280555"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "System.Net.Http",
+          "System.Xml",
+          "System.Xml.Linq",
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/XFGloss.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/XFGloss.dll": {}
+        }
+      },
       "Newtonsoft.Json/12.0.3": {
         "type": "package",
         "compile": {
@@ -228,6 +281,17 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "Xam.Plugin.Connectivity/3.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Plugin.Connectivity.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.Connectivity.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Plugin.Connectivity.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.Connectivity.dll": {}
+        }
+      },
       "Xamarin.Essentials/1.3.1": {
         "type": "package",
         "dependencies": {
@@ -370,8 +434,10 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Ansuria.XFGloss": "1.1.3",
           "Newtonsoft.Json": "12.0.3",
           "System.Net.Http": "4.3.4",
+          "Xam.Plugin.Connectivity": "3.2.0",
           "Xamarin.Essentials": "1.3.1",
           "Xamarin.Forms": "4.3.0.908675"
         },
@@ -384,6 +450,26 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x64": {
+      "Ansuria.XFGloss/1.1.3": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.5.0.280555"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "System.Net.Http",
+          "System.Xml",
+          "System.Xml.Linq",
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/XFGloss.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/XFGloss.dll": {}
+        }
+      },
       "Newtonsoft.Json/12.0.3": {
         "type": "package",
         "compile": {
@@ -412,6 +498,17 @@
         },
         "runtime": {
           "lib/xamarinios10/_._": {}
+        }
+      },
+      "Xam.Plugin.Connectivity/3.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Plugin.Connectivity.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.Connectivity.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Plugin.Connectivity.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.Connectivity.dll": {}
         }
       },
       "Xamarin.Essentials/1.3.1": {
@@ -556,8 +653,10 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Ansuria.XFGloss": "1.1.3",
           "Newtonsoft.Json": "12.0.3",
           "System.Net.Http": "4.3.4",
+          "Xam.Plugin.Connectivity": "3.2.0",
           "Xamarin.Essentials": "1.3.1",
           "Xamarin.Forms": "4.3.0.908675"
         },
@@ -570,6 +669,26 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x86": {
+      "Ansuria.XFGloss/1.1.3": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.5.0.280555"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "System.Net.Http",
+          "System.Xml",
+          "System.Xml.Linq",
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/XFGloss.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/XFGloss.dll": {}
+        }
+      },
       "Newtonsoft.Json/12.0.3": {
         "type": "package",
         "compile": {
@@ -598,6 +717,17 @@
         },
         "runtime": {
           "lib/xamarinios10/_._": {}
+        }
+      },
+      "Xam.Plugin.Connectivity/3.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Plugin.Connectivity.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.Connectivity.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Plugin.Connectivity.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.Connectivity.dll": {}
         }
       },
       "Xamarin.Essentials/1.3.1": {
@@ -742,8 +872,10 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Ansuria.XFGloss": "1.1.3",
           "Newtonsoft.Json": "12.0.3",
           "System.Net.Http": "4.3.4",
+          "Xam.Plugin.Connectivity": "3.2.0",
           "Xamarin.Essentials": "1.3.1",
           "Xamarin.Forms": "4.3.0.908675"
         },
@@ -757,6 +889,25 @@
     }
   },
   "libraries": {
+    "Ansuria.XFGloss/1.1.3": {
+      "sha512": "qvds3Cpr+2raZocNZE3aMMtcMyv7Uua5weIFXuFLXsxUOqsRz2mr3eBEVq0QLnUymDOz4BCJ+6MtHNZM74ryKw==",
+      "type": "package",
+      "path": "ansuria.xfgloss/1.1.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ansuria.xfgloss.1.1.3.nupkg.sha512",
+        "ansuria.xfgloss.nuspec",
+        "lib/monoandroid80/XFGloss.dll",
+        "lib/monoandroid80/XFGloss.xml",
+        "lib/netstandard1.0/XFGloss.dll",
+        "lib/netstandard1.0/XFGloss.xml",
+        "lib/netstandard2.0/XFGloss.dll",
+        "lib/netstandard2.0/XFGloss.xml",
+        "lib/xamarinios10/XFGloss.dll",
+        "lib/xamarinios10/XFGloss.xml"
+      ]
+    },
     "Newtonsoft.Json/12.0.3": {
       "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
       "type": "package",
@@ -875,6 +1026,73 @@
         "system.numerics.vectors.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "Xam.Plugin.Connectivity/3.2.0": {
+      "sha512": "ZV45TaBTCJg7XQNEl3fPyyJcuMMhdDEQ6BCLc/5pMuTv38M226ER0WTu5sbmba8jlliDuzeRqkRFHwrGdWAgyg==",
+      "type": "package",
+      "path": "xam.plugin.connectivity/3.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10/Plugin.Connectivity.Abstractions.dll",
+        "lib/MonoAndroid10/Plugin.Connectivity.Abstractions.pdb",
+        "lib/MonoAndroid10/Plugin.Connectivity.Abstractions.xml",
+        "lib/MonoAndroid10/Plugin.Connectivity.dll",
+        "lib/MonoAndroid10/Plugin.Connectivity.pdb",
+        "lib/MonoAndroid10/Plugin.Connectivity.xml",
+        "lib/UAP10/Plugin.Connectivity.Abstractions.dll",
+        "lib/UAP10/Plugin.Connectivity.Abstractions.pdb",
+        "lib/UAP10/Plugin.Connectivity.Abstractions.xml",
+        "lib/UAP10/Plugin.Connectivity.XML",
+        "lib/UAP10/Plugin.Connectivity.dll",
+        "lib/UAP10/Plugin.Connectivity.pdb",
+        "lib/UAP10/Plugin.Connectivity.pri",
+        "lib/UAP10/Plugin.Connectivity/Properties/Plugin.Connectivity.rd.xml",
+        "lib/Xamarin.Mac20/Plugin.Connectivity.Abstractions.dll",
+        "lib/Xamarin.Mac20/Plugin.Connectivity.Abstractions.pdb",
+        "lib/Xamarin.Mac20/Plugin.Connectivity.Abstractions.xml",
+        "lib/Xamarin.Mac20/Plugin.Connectivity.dll",
+        "lib/Xamarin.Mac20/Plugin.Connectivity.pdb",
+        "lib/Xamarin.Mac20/Plugin.Connectivity.xml",
+        "lib/Xamarin.iOS10/Plugin.Connectivity.Abstractions.dll",
+        "lib/Xamarin.iOS10/Plugin.Connectivity.Abstractions.pdb",
+        "lib/Xamarin.iOS10/Plugin.Connectivity.Abstractions.xml",
+        "lib/Xamarin.iOS10/Plugin.Connectivity.dll",
+        "lib/Xamarin.iOS10/Plugin.Connectivity.pdb",
+        "lib/Xamarin.iOS10/Plugin.Connectivity.xml",
+        "lib/XamarinTVOS/Plugin.Connectivity.Abstractions.dll",
+        "lib/XamarinTVOS/Plugin.Connectivity.Abstractions.pdb",
+        "lib/XamarinTVOS/Plugin.Connectivity.Abstractions.xml",
+        "lib/XamarinTVOS/Plugin.Connectivity.dll",
+        "lib/XamarinTVOS/Plugin.Connectivity.pdb",
+        "lib/XamarinTVOS/Plugin.Connectivity.xml",
+        "lib/net45/Plugin.Connectivity.Abstractions.dll",
+        "lib/net45/Plugin.Connectivity.Abstractions.pdb",
+        "lib/net45/Plugin.Connectivity.Abstractions.xml",
+        "lib/net45/Plugin.Connectivity.XML",
+        "lib/net45/Plugin.Connectivity.dll",
+        "lib/net45/Plugin.Connectivity.pdb",
+        "lib/netcoreapp2.0/Plugin.Connectivity.Abstractions.dll",
+        "lib/netcoreapp2.0/Plugin.Connectivity.Abstractions.pdb",
+        "lib/netcoreapp2.0/Plugin.Connectivity.Abstractions.xml",
+        "lib/netcoreapp2.0/Plugin.Connectivity.deps.json",
+        "lib/netcoreapp2.0/Plugin.Connectivity.dll",
+        "lib/netcoreapp2.0/Plugin.Connectivity.xml",
+        "lib/netstandard1.0/Plugin.Connectivity.Abstractions.dll",
+        "lib/netstandard1.0/Plugin.Connectivity.Abstractions.pdb",
+        "lib/netstandard1.0/Plugin.Connectivity.Abstractions.xml",
+        "lib/netstandard1.0/Plugin.Connectivity.deps.json",
+        "lib/netstandard1.0/Plugin.Connectivity.dll",
+        "lib/netstandard1.0/Plugin.Connectivity.pdb",
+        "lib/netstandard1.0/Plugin.Connectivity.xml",
+        "lib/tizen40/Plugin.Connectivity.Abstractions.dll",
+        "lib/tizen40/Plugin.Connectivity.Abstractions.pdb",
+        "lib/tizen40/Plugin.Connectivity.Abstractions.xml",
+        "lib/tizen40/Plugin.Connectivity.deps.json",
+        "lib/tizen40/Plugin.Connectivity.dll",
+        "xam.plugin.connectivity.3.2.0.nupkg.sha512",
+        "xam.plugin.connectivity.nuspec"
       ]
     },
     "Xamarin.Essentials/1.3.1": {
@@ -1185,7 +1403,9 @@
   },
   "projectFileDependencyGroups": {
     "Xamarin.iOS,Version=v1.0": [
+      "Ansuria.XFGloss >= 1.1.3",
       "CoronaVirus >= 1.0.0",
+      "Xam.Plugin.Connectivity >= 3.2.0",
       "Xamarin.Essentials >= 1.3.1",
       "Xamarin.Forms >= 4.3.0.908675"
     ]
@@ -1232,6 +1452,14 @@
     "frameworks": {
       "xamarinios10": {
         "dependencies": {
+          "Ansuria.XFGloss": {
+            "target": "Package",
+            "version": "[1.1.3, )"
+          },
+          "Xam.Plugin.Connectivity": {
+            "target": "Package",
+            "version": "[3.2.0, )"
+          },
           "Xamarin.Essentials": {
             "target": "Package",
             "version": "[1.3.1, )"
