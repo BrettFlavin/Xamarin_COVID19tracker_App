@@ -18,7 +18,7 @@
         <ResourceDictionary>            
             <Style x:Key="HeadingLabel" TargetType="Label">
                 <Setter Property="TextColor" Value="Black" />
-                <Setter Property="FontSize" Value="25" />
+                <Setter Property="FontSize" Value="20" />
                 <Setter Property="FontAttributes" Value="Italic" />
                 <Setter Property="TextDecorations" Value="Underline" />
             </Style>
@@ -28,7 +28,7 @@
             </Style>
             <Style x:Key="TimeLabel" TargetType="Label">
                 <Setter Property="TextColor" Value="BlueViolet" />
-                <Setter Property="FontSize" Value="25" />
+                <Setter Property="FontSize" Value="20" />
                 <Setter Property="FontAttributes" Value="Bold" />
             </Style>
         </ResourceDictionary>
@@ -38,8 +38,8 @@
         <StackLayout Margin="5,0,5,0">
             <!-- logo -->
             <Image Source="CoronaLogo.png"
-                   HeightRequest="150"
-                   WidthRequest="150"
+                   HeightRequest="160"
+                   WidthRequest="160"
                    Aspect="AspectFit"
                    HorizontalOptions="Center" />
 
@@ -66,13 +66,19 @@
                    Style="{StaticResource HeadingLabel}"
                    Text="Current COVID-19 Totals:" 
                    HorizontalOptions="Center"
-                   Padding="0,15,0,0"/>
+                   TextDecorations="None"
+                   Margin="0,5,0,0"/>
+            
+            <BoxView HeightRequest="2"
+                     WidthRequest="2" 
+                     BackgroundColor="LightSalmon"
+                     Margin="0,0,0,5"/>
 
             <!-- data labels - text set in code-behind -->
             <Label x:Name="lastupdatedlabel" 
                    Style="{StaticResource DataLabel}"
-                   TextColor="DarkViolet" 
-                   HorizontalOptions="Center" />
+                   TextColor="DarkViolet"                    
+                   HorizontalOptions="Center" />           
             <Label x:Name="caselabel" 
                    Style="{StaticResource DataLabel}"                   
                    TextColor="Black" />

@@ -71,10 +71,10 @@ namespace CoronaVirus
             timenow = timenow.AddMilliseconds(totals.updated).ToLocalTime();
             
             // set display labels with the data received 
-            caselabel.Text = ($"# of Cases: {totals.cases.ToString()}");
-            deathslabel.Text = ($"# of Deaths: {totals.deaths.ToString()}");
-            recoveredlabel.Text = ($"# of Recovered: {totals.recovered.ToString()}");
-            lastupdatedlabel.Text = ($"(Last Updated: {timenow})");
+            caselabel.Text = ($"Total # of Cases: {totals.cases.ToString()}");
+            deathslabel.Text = ($"Total # of Deaths: {totals.deaths.ToString()}");
+            recoveredlabel.Text = ($"Total # of Recovered: {totals.recovered.ToString()}");
+            lastupdatedlabel.Text = ($"(Updated: {timenow})");
         }     
     }
 }

@@ -2,7 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"                       
              xmlns:xfg="clr-namespace:XFGloss;assembly=XFGloss"  
-             x:Class="CoronaVirus.StateDataPage">
+             x:Class="CoronaVirus.StateDataPage"             
+             Appearing="On_Page_Appearing"
+             Disappearing="On_Page_Disappearing">
 
     <!-- Implementation of XFGloss NuGet package -->
     <xfg:ContentPageGloss.BackgroundGradient>
@@ -29,8 +31,8 @@
         <StackLayout Margin="5,0,5,0">
             <!-- logo -->
             <Image Source="CoronaLogo.png"
-               HeightRequest="200"
-               WidthRequest="200"
+               HeightRequest="160"
+               WidthRequest="160"
                Aspect="AspectFit"
                HorizontalOptions="Center" />
 
@@ -47,8 +49,23 @@
                    Keyboard="Text"
                    MaxLength="20"
                    IsTextPredictionEnabled="True" 
-                   Completed="State_entry_Completed" />
-        </StackLayout>
-    </ContentPage.Content>
-    
+                   Completed="Get_State_Data" 
+                   ClearButtonVisibility="WhileEditing" />
+           
+            <!-- Labels for data returned from API call -->
+            <Label x:Name="name"
+                   Text=""/>
+            <Label x:Name="cases"
+                   Text=""/>
+            <Label x:Name="today_cases"
+                   Text=""/>
+            <Label x:Name="deaths"
+                   Text=""/>
+            <Label x:Name="today_deaths"
+                   Text=""/>
+            <Label x:Name="active"
+                   Text=""/>
+            
+        </StackLayout>        
+    </ContentPage.Content>    
 </ContentPage>
