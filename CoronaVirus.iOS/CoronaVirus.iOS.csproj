@@ -72,7 +72,7 @@
     <ImageAsset Include="Assets.xcassets\CoronaLogo.imageset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\CoronaLogo.imageset\CoronaLogo.png">
+    <ImageAsset Include="Assets.xcassets\CoronaLogo.imageset\CoronaLogo1.png">
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\earth.imageset\earth.png">

@@ -24,6 +24,11 @@
                 <Setter Property="FontAttributes" Value="Italic" />
                 <Setter Property="TextDecorations" Value="Underline" />
             </Style>
+            <Style x:Key="DataLabel" TargetType="Label">
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="Black"/>
+            </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
     
@@ -31,18 +36,17 @@
         <StackLayout Margin="5,0,5,0">
             <!-- logo -->
             <Image Source="CoronaLogo.png"
-               HeightRequest="160"
-               WidthRequest="160"
-               Aspect="AspectFit"
-               HorizontalOptions="Center" />
+                   HeightRequest="160"
+                   WidthRequest="160"
+                   Aspect="AspectFit"
+                   HorizontalOptions="Center" />
 
-            <!-- COVID-19 totals -->
-            <Label x:Name="state_total_label"
-                   Text="State Totals:"
+            <!-- page header -->
+            <Label Text="COVID-19 Data by State:"
                    HorizontalOptions="Center"
                    Style="{StaticResource HeadingLabel}"/>
 
-            <!-- entry field to enter a state -->
+            <!-- entry field for user to enter a state to get data for -->
             <Entry x:Name="state_entry"
                    Placeholder="Enter a state"
                    PlaceholderColor="BlueViolet"
@@ -54,17 +58,21 @@
            
             <!-- Labels for data returned from API call -->
             <Label x:Name="name"
-                   Text=""/>
+                   Style="{StaticResource DataLabel}" 
+                   HorizontalOptions="Center"/>
             <Label x:Name="cases"
-                   Text=""/>
-            <Label x:Name="today_cases"
-                   Text=""/>
+                   Style="{StaticResource DataLabel}" />
+            <Label x:Name="todaycases"
+                   Style="{StaticResource DataLabel}" />
             <Label x:Name="deaths"
-                   Text=""/>
-            <Label x:Name="today_deaths"
-                   Text=""/>
+                   Style="{StaticResource DataLabel}"                    
+                   TextColor="DarkRed" />
+            <Label x:Name="todaydeaths"
+                   Style="{StaticResource DataLabel}"                    
+                   TextColor="DarkRed"/>
             <Label x:Name="active"
-                   Text=""/>
+                   Style="{StaticResource DataLabel}"
+                   TextColor="Green"/>
             
         </StackLayout>        
     </ContentPage.Content>    

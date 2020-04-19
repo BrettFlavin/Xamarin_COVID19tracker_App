@@ -13,6 +13,6 @@ namespace CoronaVirus
         public MainTabbedPage()
         {
             InitializeComponent();
-        }
+        }       
     }
 }

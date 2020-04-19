@@ -28,15 +28,15 @@ namespace CoronaVirus
             HttpClient client = new HttpClient();
             try
             {
-                var json = await client.GetStringAsync("https://corona.lmao.ninja/states" + "/" + state);
+                var json = await client.GetStringAsync("https://corona.lmao.ninja/v2/states" + "/" + state);
                 StateData data = JsonConvert.DeserializeObject<StateData>(json);
 
-                // set display labels with the data received 
-                name.Text = ($"Name: {data.state.ToString()}");
+                // set state data display labels with COVID-19 data returned from API call
+                name.Text = ($"* {data.state.ToString()} State Totals *");
                 cases.Text = ($"# of Cases: {data.cases.ToString()}");
-                today_cases.Text = ($"# of Cases Today: {data.todayCases.ToString()}");
+                todaycases.Text = ($"# of Cases Today: {data.todayCases.ToString()}");
                 deaths.Text = ($"# of Deaths: {data.deaths.ToString()}");
-                today_deaths.Text = ($"# of Deaths Today: {data.todayDeaths.ToString()}");
+                todaydeaths.Text = ($"# of Deaths Today: {data.todayDeaths.ToString()}");
                 active.Text = ($"# of Active: {data.active.ToString()}");
             }
             catch
@@ -46,13 +46,13 @@ namespace CoronaVirus
             }
         }
 
-        // Called on page being navigated to
+        // Executes when page appears 
         private void On_Page_Appearing(object sender, EventArgs e)
         {
             
         }
 
-        // Called on page being navigated away from
+        // Executes when page disappears 
         private void On_Page_Disappearing(object sender, EventArgs e)
         {
             // clear the entry field
@@ -61,11 +61,10 @@ namespace CoronaVirus
             // clear all display labels 
             name.Text = "";
             cases.Text = "";
-            today_cases.Text = "";
+            todaycases.Text = "";
             deaths.Text = "";
-            today_deaths.Text = "";
+            todaydeaths.Text = "";
             active.Text = "";
         }
-
     }
 }

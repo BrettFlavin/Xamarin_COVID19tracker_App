@@ -5,7 +5,7 @@
              x:Class="CoronaVirus.CountryDataPage"
              Appearing="On_Page_Appearing"
              Disappearing="On_Page_Disappearing">
-    
+
     <!-- Implementation of XFGloss NuGet package -->
     <xfg:ContentPageGloss.BackgroundGradient>
         <xfg:Gradient Rotation="150">
@@ -24,6 +24,16 @@
                 <Setter Property="FontAttributes" Value="Italic" />
                 <Setter Property="TextDecorations" Value="Underline" />
             </Style>
+            <Style x:Key="DataLabel" TargetType="Label">
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="Black"/>
+            </Style>
+            <Style x:Key="UpdatedLabel" TargetType="Label">
+                <Setter Property="TextColor" Value="DarkMagenta" />
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
 
@@ -36,9 +46,8 @@
                    Aspect="AspectFit"
                    HorizontalOptions="Center" />
 
-            <!-- page label -->
-            <Label x:Name="country_total_label"
-                   Text="Country Totals:"
+            <!-- page header -->
+            <Label Text="COVID-19 Data by Country:"
                    HorizontalOptions="Center"
                    Style="{StaticResource HeadingLabel}"/>
 
@@ -51,21 +60,36 @@
                    IsTextPredictionEnabled="True" 
                    Completed="Get_Country_Data" 
                    ClearButtonVisibility="WhileEditing"/>
-            
-            <!-- Labels for data returned from API call -->
+
+            <!-- data labels to display all results from API call -->
             <Label x:Name="name"
-                   Text=""/>
-            <Label x:Name="cases"
-                   Text=""/>
-            <Label x:Name="deaths"
-                   Text=""/>
-            <Label x:Name="recovered"
-                   Text=""/>
-            <Label x:Name="active"
-                   Text=""/>
-            <Label x:Name="critical"
-                   Text=""/>
-            
-        </StackLayout>        
-    </ContentPage.Content>    
+                           Style="{StaticResource DataLabel}"
+                           HorizontalOptions="Center" />
+            <Label x:Name="updated"
+                           Style="{StaticResource UpdatedLabel}"
+                           HorizontalOptions="Center" />
+            <ScrollView>
+                <StackLayout>                    
+                    <Label x:Name="cases"
+                           Style="{StaticResource DataLabel}" />
+                    <Label x:Name="todaycases"
+                           Style="{StaticResource DataLabel}" />
+                    <Label x:Name="deaths"
+                           Style="{StaticResource DataLabel}"                    
+                           TextColor="DarkRed" />
+                    <Label x:Name="todaydeaths"
+                           Style="{StaticResource DataLabel}"                    
+                           TextColor="DarkRed" />
+                    <Label x:Name="active"
+                           Style="{StaticResource DataLabel}"
+                           TextColor ="Green"/>
+                    <Label x:Name="recovered"
+                           Style="{StaticResource DataLabel}" />
+                    <Label x:Name="critical"
+                           Style="{StaticResource DataLabel}" />
+                </StackLayout>
+            </ScrollView>
+
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

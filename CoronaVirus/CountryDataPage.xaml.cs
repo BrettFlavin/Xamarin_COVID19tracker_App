@@ -28,16 +28,26 @@ namespace CoronaVirus
             HttpClient client = new HttpClient();
             try
             {
-                var json = await client.GetStringAsync("https://corona.lmao.ninja/countries" + "/" + country);
+                var json = await client.GetStringAsync("https://corona.lmao.ninja/v2/countries" + "/" + country);
                 CountryData data = JsonConvert.DeserializeObject<CountryData>(json);
 
-                // set display labels with the data received 
-                name.Text = ($"Country: {data.country.ToString()}");
-                cases.Text = ($"# of Cases: {data.cases.ToString()}");
-                deaths.Text = ($"# of Deaths: {data.deaths.ToString()}");
-                recovered.Text = ($"# of Recoveries: {data.recovered.ToString()}");
-                active.Text = ($"# of Active: {data.active.ToString()}");
-                critical.Text = ($"# of Critical: {data.critical.ToString()}");
+                // API returns an 'updated' field with the UNIX TIME of last update received 
+                // create a new DateTime object to represent 1/1/1970
+                DateTime lastUpdate = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc);
+
+                // add the unix time elapsed since 1/1/1970 and convert to current local time
+                lastUpdate = lastUpdate.AddMilliseconds(data.updated).ToLocalTime();
+
+                // set country data display labels with COVID-19 data returned from API call
+                name.Text = $"* {data.country.ToString()} Country Totals *";
+                updated.Text= $"Updated: {lastUpdate.ToString()}";
+                cases.Text = $"# of Cases: {data.cases.ToString()}";
+                todaycases.Text = $"# of Cases Today: {data.todayCases.ToString()}";
+                deaths.Text = $"# of Deaths: {data.deaths.ToString()}";
+                todaydeaths.Text = $"# of Deaths Today: {data.todayDeaths.ToString()}";
+                active.Text = $"# of Active: {data.active.ToString()}";
+                critical.Text = $"# of Critical: {data.critical.ToString()}";
+                recovered.Text = $"# of Recoveries: {data.recovered.ToString()}";
             }
 
             // NEED TO HANDLE THE EXCEPTION HERE FOR OTHER THAN 200 HTTP STATUS CODES
@@ -62,10 +72,13 @@ namespace CoronaVirus
 
             // clear all display labels 
             name.Text = "";
+            updated.Text = "";
             cases.Text = "";
+            todaycases.Text = "";
             deaths.Text = "";
-            recovered.Text = "";
+            todaydeaths.Text = "";
             active.Text = "";
+            recovered.Text = "";            
             critical.Text = "";
         }
 

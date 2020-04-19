@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.ObjectModel;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,17 +12,20 @@ using Plugin.Connectivity;
 
 namespace CoronaVirus
 {
- 
+    
     public partial class TotalDataHomePage : ContentPage
     {
+        public ObservableCollection<TotalData> totals { get; set; }
+
         public TotalDataHomePage()
         {
             InitializeComponent();
-            CheckConnection();
-            StartTimer();
-            BindingContext = this;
+           // CheckConnection();
+           // StartTimer();           
         }
 
+        // function executes on startup to verify internet connection is active
+        // calls GetTotalCases() as long as there is a connection
         private async void CheckConnection()
         {
             // check for internet connection and alert user if no connection exists
@@ -36,45 +40,86 @@ namespace CoronaVirus
 
         }
 
-        // a function to display the current time and number of days since first case was reported
+        // function executes on startup to display the current time and number of days since first case was reported
         private void StartTimer()
         {
             // set the current time in the time label
             Device.StartTimer(TimeSpan.FromSeconds(1), () =>
             {
+                // get current time when main thread starts
                 Device.BeginInvokeOnMainThread(() =>
-               displayed_time.Text = DateTime.Now.ToString("HH.mm:ss"));
+                timelabel.Text = DateTime.Now.ToString("HH.mm:ss"));
 
-                // display the number of days since first case of CoronaVirus was reported (1/22/2020)
+                // display number of days since first case of Covid-19 was reported (using 1/22/2020)
                 DateTime startDate = new System.DateTime(2020, 1, 22, 12, 0, 0);
                 System.TimeSpan days = DateTime.Now.Date - startDate;
-                displayed_days.Text = days.TotalDays.ToString();
+
+                // display the days since 1st COVID-19 case was reported
+                dayslabel.Text = days.TotalDays.ToString();
+
                 return true;
             });
         }
-
-        // a function to get Corona virus data from the API (total numbers) and then display it
+        
+        // function executes once internet connection is verified to call API, get totals, and display them
+        // API: NOVEL COVID-19 
+        // BASE URL: https://corona.lmao.ninja/
         private async void GetTotalCases()
         {
             // create new http client to handle the request
             HttpClient client = new HttpClient();
+           
+            // send GET request to return totals for all countries and store response in TotalData object
+            var json = await client.GetStringAsync("https://corona.lmao.ninja/v2/all");
 
-            // send GET request and store response in TotalData object
-            var json = await client.GetStringAsync("https://corona.lmao.ninja/all");
+            // deserialize the json response to a TotalData object 
             TotalData totals = JsonConvert.DeserializeObject<TotalData>(json);
 
+            // API returns an 'updated' field with the UNIX TIME of last update received 
             // create a new DateTime object to represent 1/1/1970
-            DateTime timenow = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc);
+            DateTime lastUpdate = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc);
             
-            // the API call returns an 'updated' field with the unix time of last update 
-            // add the unix time elapsed since 1/1/1970 to get current local time
-            timenow = timenow.AddMilliseconds(totals.updated).ToLocalTime();
+            // add the unix time elapsed since 1/1/1970 and convert to current local time
+            lastUpdate = lastUpdate.AddMilliseconds(totals.updated).ToLocalTime();
             
-            // set display labels with the data received 
-            caselabel.Text = ($"Total # of Cases: {totals.cases.ToString()}");
-            deathslabel.Text = ($"Total # of Deaths: {totals.deaths.ToString()}");
-            recoveredlabel.Text = ($"Total # of Recovered: {totals.recovered.ToString()}");
-            lastupdatedlabel.Text = ($"(Updated: {timenow})");
-        }     
+            // set the time label to display current local time
+            updatelabel.Text = $"Updated: {lastUpdate.ToString()}";
+
+            // set total data display labels with COVID-19 data returned from API call
+            caseslabel.Text = $"Total # of Cases: {totals.cases.ToString()}";
+            todaycaseslabel.Text = $"Total # of Cases Today: {totals.todayCases.ToString()}";
+            deathslabel.Text = $"Total # of Deaths: {totals.deaths.ToString()}";
+            todaydeathslabel.Text = $"Total # of Deaths Today: {totals.todayDeaths.ToString()}";
+            recoveredlabel.Text = $"Total # of Recovered: {totals.recovered.ToString()}";
+            activelabel.Text = $"Total # of Active: {totals.active.ToString()}";
+            criticallabel.Text = $"Total # of Critical: {totals.critical.ToString()}";
+            countriesaffectedlabel.Text = $"Total # of Countries Affected: {totals.affectedCountries.ToString()}";            
+        }
+
+        // Executes when page appears 
+        private void On_Page_Appearing(object sender, EventArgs e)
+        {
+            CheckConnection();
+            StartTimer();
+        }
+
+        // Executes when page disappears 
+        private void On_Page_Disappearing(object sender, EventArgs e)
+        {
+            // clear time and days labels
+            timelabel.Text = "";
+            dayslabel.Text = "";            
+
+            // clear all other data display labels 
+            updatelabel.Text = "";
+            caseslabel.Text = "";
+            todaycaseslabel.Text = "";
+            deathslabel.Text = "";
+            todaydeathslabel.Text = "";
+            recoveredlabel.Text = "";
+            activelabel.Text = "";
+            criticallabel.Text = "";
+            countriesaffectedlabel.Text = "";
+        }
     }
 }
