@@ -39,7 +39,7 @@ namespace CoronaVirus
                 lastUpdate = lastUpdate.AddMilliseconds(data.updated).ToLocalTime();
 
                 // set country data display labels with COVID-19 data returned from API call
-                name.Text = $"* {data.country.ToString()} Country Totals *";
+                name.Text = $"{data.country.ToString()} Country Totals";
                 updated.Text= $"Updated: {lastUpdate.ToString()}";
                 cases.Text = $"# of Cases: {data.cases.ToString()}";
                 todaycases.Text = $"# of Cases Today: {data.todayCases.ToString()}";
@@ -48,9 +48,10 @@ namespace CoronaVirus
                 active.Text = $"# of Active: {data.active.ToString()}";
                 critical.Text = $"# of Critical: {data.critical.ToString()}";
                 recovered.Text = $"# of Recoveries: {data.recovered.ToString()}";
+                flaglogo.Source = data.countryInfo.flag;
+                // make the view visible
+                countryscroll.IsVisible = true;
             }
-
-            // NEED TO HANDLE THE EXCEPTION HERE FOR OTHER THAN 200 HTTP STATUS CODES
             catch
             {
                 await DisplayAlert("Not Found!", ($"no data found for \"{country}\""), "CANCEL");
@@ -58,14 +59,8 @@ namespace CoronaVirus
             }
         }
 
-        // Called on page being navigated to
-        private void On_Page_Appearing(object sender, EventArgs e)
-        {
-
-        }
-
-        // Called on page being navigated away from
-        private void On_Page_Disappearing(object sender, EventArgs e)
+        // function to clear all displayed API data from page
+        private void ClearData()
         {
             // clear the entry field
             country_entry.Text = "";
@@ -78,9 +73,35 @@ namespace CoronaVirus
             deaths.Text = "";
             todaydeaths.Text = "";
             active.Text = "";
-            recovered.Text = "";            
+            recovered.Text = "";
             critical.Text = "";
+
+            // hide the scrollview
+            countryscroll.IsVisible = false;
         }
 
+        // event fires on button click to get and display a list of all country's data from API
+        private void GetCountriesButton_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        // event fires on button click to clear all API data from page
+        private void ClearButton_Clicked(object sender, EventArgs e)
+        {
+            ClearData();
+        }
+
+        // Called on page being navigated to
+        private void On_Page_Appearing(object sender, EventArgs e)
+        {
+
+        }
+
+        // Called on page being navigated away from
+        private void On_Page_Disappearing(object sender, EventArgs e)
+        {
+            ClearData();
+        }
     }
 }

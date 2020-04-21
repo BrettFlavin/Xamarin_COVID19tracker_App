@@ -1,12 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 
 namespace CoronaVirus
 {
+    public class CountryInfo
+    {        
+        public string flag { get; set; } 
+    }
     class CountryData
     {       
         public string country { get; set; }
+        public CountryInfo countryInfo { get; set; } 
         public long updated { get; set; }
         public int cases { get; set; }
         public int todayCases { get; set; }
@@ -21,6 +27,6 @@ namespace CoronaVirus
 
     class CountryDataList
     {
-        public List<CountryData> countries { get; set; }
+        public ObservableCollection<CountryData> countries { get; set; }
     }
 }

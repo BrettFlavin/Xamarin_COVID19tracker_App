@@ -20,7 +20,7 @@
         <ResourceDictionary>
             <Style x:Key="HeadingLabel" TargetType="Label">
                 <Setter Property="TextColor" Value="Black" />
-                <Setter Property="FontSize" Value="25" />
+                <Setter Property="FontSize" Value="22" />
                 <Setter Property="FontAttributes" Value="Italic" />
                 <Setter Property="TextDecorations" Value="Underline" />
             </Style>
@@ -34,6 +34,12 @@
                 <Setter Property="FontSize" Value="20" />
                 <Setter Property="FontAttributes" Value="Bold" />
             </Style>
+            <Style x:Key="SeparatorLine" TargetType="BoxView">
+                <Setter Property="HeightRequest" Value="2" />
+                <Setter Property="WidthRequest" Value="2" />
+                <Setter Property="BackgroundColor" Value="DarkSalmon" />
+                <Setter Property="Opacity" Value=".3" />
+            </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
 
@@ -41,8 +47,8 @@
         <StackLayout Margin="5,0,5,0">
             <!-- logo -->
             <Image Source="CoronaLogo.png"
-                   HeightRequest="160"
-                   WidthRequest="160"
+                   HeightRequest="140"
+                   WidthRequest="140"
                    Aspect="AspectFit"
                    HorizontalOptions="Center" />
 
@@ -58,35 +64,59 @@
                    Keyboard="Text"
                    MaxLength="20"
                    IsTextPredictionEnabled="True" 
+                   ReturnType="Done"
                    Completed="Get_Country_Data" 
-                   ClearButtonVisibility="WhileEditing"/>
+                   ClearButtonVisibility="WhileEditing" />
+
+            <!-- Buttons to get data for all states and to clear data -->
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Button x:Name="getcountriesbutton"
+                        Text="Get All Countries" 
+                        BorderColor="Accent"
+                        Clicked="GetCountriesButton_Clicked" />
+                <Button x:Name="clearbutton"
+                        Text="Clear Data" 
+                        BorderColor="Accent"
+                        Clicked="ClearButton_Clicked" />
+            </StackLayout>
 
             <!-- data labels to display all results from API call -->
             <Label x:Name="name"
                            Style="{StaticResource DataLabel}"
-                           HorizontalOptions="Center" />
-            <Label x:Name="updated"
+                           HorizontalOptions="Center" />            
+            <ScrollView x:Name="countryscroll" Margin="0,5,0,0" IsVisible="False">
+                <StackLayout>
+                    <Label x:Name="updated"
                            Style="{StaticResource UpdatedLabel}"
-                           HorizontalOptions="Center" />
-            <ScrollView>
-                <StackLayout>                    
+                           HorizontalOptions="Center" />                    
+                    <Image x:Name="flaglogo"
+                           WidthRequest="50" 
+                           HeightRequest="50" />
+                    <BoxView Style="{StaticResource SeparatorLine}"/>
                     <Label x:Name="cases"
                            Style="{StaticResource DataLabel}" />
+                    <BoxView Style="{StaticResource SeparatorLine}"/>
                     <Label x:Name="todaycases"
                            Style="{StaticResource DataLabel}" />
+                    <BoxView Style="{StaticResource SeparatorLine}"/>
                     <Label x:Name="deaths"
                            Style="{StaticResource DataLabel}"                    
-                           TextColor="DarkRed" />
+                           TextColor="#FF0000" />
+                    <BoxView Style="{StaticResource SeparatorLine}"/>
                     <Label x:Name="todaydeaths"
                            Style="{StaticResource DataLabel}"                    
-                           TextColor="DarkRed" />
+                           TextColor="#FF0000" />
+                    <BoxView Style="{StaticResource SeparatorLine}"/>
                     <Label x:Name="active"
-                           Style="{StaticResource DataLabel}"
-                           TextColor ="Green"/>
+                           Style="{StaticResource DataLabel}"/>
+                    <BoxView Style="{StaticResource SeparatorLine}"/>
                     <Label x:Name="recovered"
-                           Style="{StaticResource DataLabel}" />
+                           Style="{StaticResource DataLabel}"                           
+                           TextColor ="#04FA18" />
+                    <BoxView Style="{StaticResource SeparatorLine}"/>
                     <Label x:Name="critical"
                            Style="{StaticResource DataLabel}" />
+                    <BoxView Style="{StaticResource SeparatorLine}"/>
                 </StackLayout>
             </ScrollView>
 

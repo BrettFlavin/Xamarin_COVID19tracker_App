@@ -1,7 +1,18 @@
 C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus.iOS\bin\iPhoneSimulator\Debug\CoronaVirus.iOS.exe
 C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus.iOS\bin\iPhoneSimulator\Debug\CoronaVirus.iOS.pdb
+C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus.iOS\bin\iPhoneSimulator\Debug\XFGloss.dll
+C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus.iOS\bin\iPhoneSimulator\Debug\Microcharts.dll
+C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus.iOS\bin\iPhoneSimulator\Debug\Microcharts.iOS.dll
+C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus.iOS\bin\iPhoneSimulator\Debug\Microcharts.Forms.dll
 C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus.iOS\bin\iPhoneSimulator\Debug\Newtonsoft.Json.dll
+C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus.iOS\bin\iPhoneSimulator\Debug\SkiaSharp.dll
+C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus.iOS\bin\iPhoneSimulator\Debug\SkiaSharp.Views.iOS.dll
+C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus.iOS\bin\iPhoneSimulator\Debug\SkiaSharp.Views.Forms.dll
 C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus.iOS\bin\iPhoneSimulator\Debug\System.Net.Http.dll
+C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus.iOS\bin\iPhoneSimulator\Debug\Plugin.Connectivity.Abstractions.dll
+C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus.iOS\bin\iPhoneSimulator\Debug\Plugin.Connectivity.Abstractions.pdb
+C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus.iOS\bin\iPhoneSimulator\Debug\Plugin.Connectivity.dll
+C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus.iOS\bin\iPhoneSimulator\Debug\Plugin.Connectivity.pdb
 C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus.iOS\bin\iPhoneSimulator\Debug\Xamarin.Essentials.dll
 C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus.iOS\bin\iPhoneSimulator\Debug\Xamarin.Essentials.pdb
 C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Core.dll
@@ -58,8 +69,3 @@ C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus.iOS\obj\iPhoneSimulator\Debug\Xam
 C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus.iOS\obj\iPhoneSimulator\Debug\CoronaVirus.iOS.csproj.CopyComplete
 C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus.iOS\obj\iPhoneSimulator\Debug\CoronaVirus.iOS.exe
 C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus.iOS\obj\iPhoneSimulator\Debug\CoronaVirus.iOS.pdb
-C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus.iOS\bin\iPhoneSimulator\Debug\Plugin.Connectivity.Abstractions.dll
-C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus.iOS\bin\iPhoneSimulator\Debug\Plugin.Connectivity.Abstractions.pdb
-C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus.iOS\bin\iPhoneSimulator\Debug\Plugin.Connectivity.dll
-C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus.iOS\bin\iPhoneSimulator\Debug\Plugin.Connectivity.pdb
-C:\Users\Brett\Desktop\CoronaVirus\CoronaVirus.iOS\bin\iPhoneSimulator\Debug\XFGloss.dll

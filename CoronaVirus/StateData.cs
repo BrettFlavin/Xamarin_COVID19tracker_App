@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 
 namespace CoronaVirus
@@ -16,6 +17,6 @@ namespace CoronaVirus
 
     public class StateDataList
     {
-        public List<StateData> states { get; set; }
+        public ObservableCollection<StateData> states { get; set; }
     }
 }

@@ -26,6 +26,7 @@ namespace CoronaVirus.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::Microcharts.Droid.Resource.String.library_name = global::CoronaVirus.Droid.Resource.String.library_name;
 			global::Xamarin.Essentials.Resource.Attribute.alpha = global::CoronaVirus.Droid.Resource.Attribute.alpha;
 			global::Xamarin.Essentials.Resource.Attribute.coordinatorLayoutStyle = global::CoronaVirus.Droid.Resource.Attribute.coordinatorLayoutStyle;
 			global::Xamarin.Essentials.Resource.Attribute.font = global::CoronaVirus.Droid.Resource.Attribute.font;
@@ -3710,6 +3711,7 @@ namespace CoronaVirus.Droid
 			global::XFGloss.Droid.Resource.String.appbar_scrolling_view_behavior = global::CoronaVirus.Droid.Resource.String.appbar_scrolling_view_behavior;
 			global::XFGloss.Droid.Resource.String.bottom_sheet_behavior = global::CoronaVirus.Droid.Resource.String.bottom_sheet_behavior;
 			global::XFGloss.Droid.Resource.String.character_counter_pattern = global::CoronaVirus.Droid.Resource.String.character_counter_pattern;
+			global::XFGloss.Droid.Resource.String.library_name = global::CoronaVirus.Droid.Resource.String.library_name;
 			global::XFGloss.Droid.Resource.String.password_toggle_content_description = global::CoronaVirus.Droid.Resource.String.password_toggle_content_description;
 			global::XFGloss.Droid.Resource.String.path_password_eye = global::CoronaVirus.Droid.Resource.String.path_password_eye;
 			global::XFGloss.Droid.Resource.String.path_password_eye_mask_strike_through = global::CoronaVirus.Droid.Resource.String.path_password_eye_mask_strike_through;
@@ -8736,28 +8738,31 @@ namespace CoronaVirus.Droid
 			public const int hide_bottom_view_on_scroll_behavior = 2131558445;
 			
 			// aapt resource value: 0x7F0D002E
-			public const int mtrl_chip_close_icon_content_description = 2131558446;
+			public const int library_name = 2131558446;
 			
 			// aapt resource value: 0x7F0D002F
-			public const int password_toggle_content_description = 2131558447;
+			public const int mtrl_chip_close_icon_content_description = 2131558447;
 			
 			// aapt resource value: 0x7F0D0030
-			public const int path_password_eye = 2131558448;
+			public const int password_toggle_content_description = 2131558448;
 			
 			// aapt resource value: 0x7F0D0031
-			public const int path_password_eye_mask_strike_through = 2131558449;
+			public const int path_password_eye = 2131558449;
 			
 			// aapt resource value: 0x7F0D0032
-			public const int path_password_eye_mask_visible = 2131558450;
+			public const int path_password_eye_mask_strike_through = 2131558450;
 			
 			// aapt resource value: 0x7F0D0033
-			public const int path_password_strike_through = 2131558451;
+			public const int path_password_eye_mask_visible = 2131558451;
 			
 			// aapt resource value: 0x7F0D0034
-			public const int search_menu_title = 2131558452;
+			public const int path_password_strike_through = 2131558452;
 			
 			// aapt resource value: 0x7F0D0035
-			public const int status_bar_notification_info_overflow = 2131558453;
+			public const int search_menu_title = 2131558453;
+			
+			// aapt resource value: 0x7F0D0036
+			public const int status_bar_notification_info_overflow = 2131558454;
 			
 			static String()
 			{

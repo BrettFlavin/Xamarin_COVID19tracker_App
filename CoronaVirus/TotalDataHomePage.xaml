@@ -2,15 +2,17 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"             
              xmlns:xfg="clr-namespace:XFGloss;assembly=XFGloss"  
+             xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms" 
              x:Class="CoronaVirus.TotalDataHomePage"
-             Appearing="On_Page_Appearing"
-             Disappearing="On_Page_Disappearing">
+             xmlns:local="clr-namespace:CoronaVirus"
+             Appearing="On_PageAppearing"
+             Disappearing="On_PageDisappearing">
 
     <!-- Implementation of XFGloss NuGet package -->
     <xfg:ContentPageGloss.BackgroundGradient>
         <xfg:Gradient Rotation="150">
             <xfg:GradientStep StepColor="BlueViolet" StepPercentage="0" />
-            <xfg:GradientStep StepColor="Salmon" StepPercentage=".5" />
+            <xfg:GradientStep StepColor="LightSalmon" StepPercentage=".5" />
             <xfg:GradientStep StepColor="BlueViolet" StepPercentage="1" />
         </xfg:Gradient>
     </xfg:ContentPageGloss.BackgroundGradient>
@@ -20,7 +22,7 @@
         <ResourceDictionary>
             <Style x:Key="HeadingLabel" TargetType="Label">
                 <Setter Property="TextColor" Value="Black" />
-                <Setter Property="FontSize" Value="20" />
+                <Setter Property="FontSize" Value="18" />
                 <Setter Property="FontAttributes" Value="Italic" />
                 <Setter Property="TextDecorations" Value="Underline" />
             </Style>
@@ -29,108 +31,132 @@
                 <Setter Property="FontAttributes" Value="Bold" />
                 <Setter Property="TextColor" Value="Black" />
             </Style>
-            <Style x:Key="TimeLabel" TargetType="Label">
-                <Setter Property="TextColor" Value="DarkMagenta" />
-                <Setter Property="FontSize" Value="20" />
-                <Setter Property="FontAttributes" Value="Bold" />
+            <Style x:Key="SeparatorLine" TargetType="BoxView">
+                <Setter Property="HeightRequest" Value="2" />
+                <Setter Property="WidthRequest" Value="2" />
+                <Setter Property="BackgroundColor" Value="DarkSalmon" />
+                <Setter Property="Opacity" Value=".3" />
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
 
     <ContentPage.Content>
-        <StackLayout Margin="5,0,5,0">
-            <!-- logo -->
-            <Image Source="CoronaLogo.png"
-                   HeightRequest="160"
-                   WidthRequest="160"
+        <StackLayout Margin="5,0,5,0"  Spacing="0" >
+            <!-- App logo -->
+            <Image Source="CoronaLogo.png"                      
+                   HeightRequest="140"
+                   WidthRequest="140"
                    Aspect="AspectFit"
                    HorizontalOptions="Center" />
-           
-            <!-- page header label -->           
-            <Label x:Name="coronalabel"                  
-                   Style="{StaticResource HeadingLabel}"
-                   Text="Global COVID-19 Totals:"
-                   HorizontalOptions="Center" />
 
-            <StackLayout Spacing="0" BackgroundColor="LightBlue">
-                <!-- label to display last update received from API -->
-                <Label x:Name="updatelabel" 
-                       Style="{StaticResource TimeLabel}" 
-                       HorizontalOptions="Center" />
-
-                <!-- label for local time -->
-                <StackLayout Orientation="Horizontal">
+            <StackLayout Orientation="Vertical" HorizontalOptions="End">
+                <!-- Local Time label -->
+                <StackLayout Orientation="Horizontal" >
                     <Label Style="{StaticResource HeadingLabel}" 
                            Text="Local Time:" />
                     <Label x:Name="timelabel" 
-                           Style="{StaticResource TimeLabel}" />
+                           Style="{StaticResource DataLabel}"
+                           TextColor="DarkMagenta"/>
                 </StackLayout>
-
-                <!-- label for days since outbreak began -->
+                <!-- Days Since label 1st Case label -->
                 <StackLayout Orientation="Horizontal">
                     <Label Style="{StaticResource HeadingLabel}" 
                            Text="Days Since 1st Case:" />
                     <Label x:Name="dayslabel"
-                           Style="{StaticResource TimeLabel}" />
+                           Style="{StaticResource DataLabel}"
+                           TextColor="DarkMagenta"/>
                 </StackLayout>
             </StackLayout>
-            
-            <!-- data labels to display all results from API call -->
-            <ScrollView>
-                <StackLayout>              
-                    <Label x:Name="caseslabel" 
-                           Style="{StaticResource DataLabel}"      
-                           Margin="0,20,0,0"/>
-                    <BoxView HeightRequest="2"
-                             WidthRequest="2" 
-                             BackgroundColor="LightSalmon" 
-                             Opacity=".3"/>
+
+            <!-- data labels to display all results from the API call -->
+            <ScrollView x:Name="totalscroll" Margin="0,10,0,0" IsVisible="False">
+                <StackLayout>
+                    <!-- Global COVID-19 Totals label -->
+                    <Label x:Name="coronalabel"                  
+                           Style="{StaticResource HeadingLabel}"
+                           Text="Global COVID-19 Totals:"
+                           HorizontalOptions="Center" 
+                           Margin="0,10,0,0"
+                           FontSize="22" />
+
+                    <!-- Updated label -->
+                    <Label x:Name="updatelabel" 
+                           Margin="0,0,0,10"
+                           Style="{StaticResource DataLabel}" 
+                           TextColor="DarkMagenta"
+                           HorizontalOptions="Center" />
+
+                    <!-- a microchart LineGraph of global cases over past week -->
+                    <microcharts:ChartView x:Name="cases_chart" 
+                                           HeightRequest="150" 
+                                           BackgroundColor="White"
+                                           Opacity=".5" />
+                    <!-- Chart Label -->
+                    <Label Text="# of Cases"
+                           Margin="0,0,0,10"                           
+                           FontSize="14"
+                           TextColor="#000000"
+                           TextDecorations="Underline"
+                           HorizontalOptions="Center" />  
+                    
+                    <!-- a microchart LineGraph of global deaths over past week -->
+                    <microcharts:ChartView x:Name="deaths_chart" 
+                                           HeightRequest="150" 
+                                           BackgroundColor="White"
+                                           Opacity=".5" />
+                    <!-- Chart Label -->
+                    <Label Text="# of Deaths"
+                           Margin="0,0,0,10"                           
+                           FontSize="14"
+                           TextColor="#FF0000"
+                           TextDecorations="Underline"
+                           HorizontalOptions="Center" />
+
+                    <!-- a microchart LineGraph of global recoveries over past week -->
+                    <microcharts:ChartView x:Name="recoveries_chart" 
+                                           HeightRequest="150" 
+                                           BackgroundColor="White"
+                                           Opacity=".5" />
+                    <!-- Chart Label -->
+                    <Label Text="# of Recoveries"
+                           Margin="0,0,0,10"                           
+                           FontSize="14"
+                           TextColor="#04FA18"
+                           TextDecorations="Underline"
+                           HorizontalOptions="Center" />   
+                    
+                    <!-- display all global data -->
+                    <BoxView Style="{StaticResource SeparatorLine}" />
+                    <Label x:Name="caseslabel"  
+                           Style="{StaticResource DataLabel}" />
+                    <BoxView Style="{StaticResource SeparatorLine}" />
                     <Label x:Name="deathslabel" 
+                           Margin="40,0,0,0"
                            Style="{StaticResource DataLabel}"                    
-                           TextColor="DarkRed" />
-                    <BoxView HeightRequest="2"
-                             WidthRequest="2" 
-                             BackgroundColor="LightSalmon" 
-                             Opacity=".3"/>
+                           TextColor="#FF0000" />
+                    <BoxView Style="{StaticResource SeparatorLine}" />
                     <Label x:Name="todaycaseslabel" 
                            Style="{StaticResource DataLabel}" />
-                    <BoxView HeightRequest="2"
-                             WidthRequest="2" 
-                             BackgroundColor="LightSalmon" 
-                             Opacity=".3"/>
+                    <BoxView Style="{StaticResource SeparatorLine}" />
                     <Label x:Name="todaydeathslabel" 
+                           Margin="40,0,0,0"
                            Style="{StaticResource DataLabel}"                    
-                           TextColor="DarkRed" />
-                    <BoxView HeightRequest="2"
-                             WidthRequest="2" 
-                             BackgroundColor="LightSalmon" 
-                             Opacity=".3"/>
+                           TextColor="#FF0000" />
+                    <BoxView Style="{StaticResource SeparatorLine}" />
                     <Label x:Name="activelabel" 
                            Style="{StaticResource DataLabel}"                    
                            TextColor="Yellow" />
-                    <BoxView HeightRequest="2"
-                             WidthRequest="2" 
-                             BackgroundColor="LightSalmon" 
-                             Opacity=".3"/>
+                    <BoxView Style="{StaticResource SeparatorLine}" />
                     <Label x:Name="recoveredlabel" 
                            Style="{StaticResource DataLabel}"                    
-                           TextColor="Green" />
-                    <BoxView HeightRequest="2"
-                             WidthRequest="2" 
-                             BackgroundColor="LightSalmon" 
-                             Opacity=".3"/>
+                           TextColor="#04FA18" />
+                    <BoxView Style="{StaticResource SeparatorLine}" />
                     <Label x:Name="criticallabel" 
                            Style="{StaticResource DataLabel}" />
-                    <BoxView HeightRequest="2"
-                             WidthRequest="2" 
-                             BackgroundColor="LightSalmon" 
-                             Opacity=".3"/>
+                    <BoxView Style="{StaticResource SeparatorLine}" />
                     <Label x:Name="countriesaffectedlabel" 
                            Style="{StaticResource DataLabel}" />
-                    <BoxView HeightRequest="2"
-                             WidthRequest="2" 
-                             BackgroundColor="LightSalmon" 
-                             Opacity=".3"/>
+                    <BoxView Style="{StaticResource SeparatorLine}" />
                 </StackLayout>
             </ScrollView>
 

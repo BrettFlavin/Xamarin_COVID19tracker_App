@@ -5,9 +5,9 @@
             x:Class="CoronaVirus.MainTabbedPage"
             Title="HomePage"
             BackgroundColor="Black"
-            Padding="10" >
+            Padding="3" >
 
-    <!-- MainTabbedPage has 3 child pages: 
+    <!-- MainTabbedPage has 3 child Content pages: 
            - totals page (Home)
            - country data page
            - state data page -->
