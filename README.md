@@ -141,7 +141,7 @@ Project Link: [https://github.com/BrettFlavin/Xamarin_COVID19tracker_App](https:
 [issues-shield]: https://img.shields.io/github/issues/BrettFlavin/Xamarin_COVID19tracker_App?style=plastic
 [issues-url]: https://github.com/BrettFlavin/Xamarin_COVID19tracker_App/issues
 [license-shield]: https://img.shields.io/github/license/BrettFlavin/Xamarin_COVID19tracker_App.svg?style=plastic
-[license-url]: https://github.com/BrettFlavin/Xamarin_COVID19tracker_App/LICENSE.txt
+[license-url]: https://github.com/BrettFlavin/Xamarin_COVID19tracker_App/blob/master/LICENSE.txt
 [CoronaTracker2020-screenshot]: https://github.com/BrettFlavin/Xamarin_COVID19tracker_App/images/screenshot.png
 [CoronaTracker2020-screenshot2]: https://github.com/BrettFlavin/Xamarin_COVID19tracker_App/images/screenshot2.png
 [CoronaTracker2020-screenshot3]: https://github.com/BrettFlavin/Xamarin_COVID19tracker_App/images/screenshot3.png
