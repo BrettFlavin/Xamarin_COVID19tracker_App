@@ -93,7 +93,7 @@ Country Totals:
 Country Totals:
 
 
-![Corona Tracker Screen Shot5](https://github.com/BrettFlavin/Xamarin_COVID19tracker_App/blob/master/images/screenshot5.PNG)
+![Corona Tracker Screen Shot5](https://github.com/BrettFlavin/Xamarin_COVID19tracker_App/blob/master/images/Screenshot5.PNG)
 
 
 
