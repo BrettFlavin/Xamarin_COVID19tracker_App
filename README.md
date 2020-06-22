@@ -75,25 +75,25 @@ This application was created in Visual Studio 2019 using Xamarin.Forms to target
 
 Here are some example screenshots of the application running on an Android device:
 
-Global totals:
+**Global totals:**
 
 
 ![Corona Tracker Screen Shot2](https://github.com/BrettFlavin/Xamarin_COVID19tracker_App/blob/master/images/screenshot2.PNG)
 
-State Totals:
+**State Totals:**
 
 
 ![Corona Tracker Screen Shot3](https://github.com/BrettFlavin/Xamarin_COVID19tracker_App/blob/master/images/screenshot3.PNG)
 
-Country Totals:
+**Country Totals:**
 
 
 ![Corona Tracker Screen Shot4](https://github.com/BrettFlavin/Xamarin_COVID19tracker_App/blob/master/images/screenshot4.PNG)
 
-Country Totals:
+**Country Totals:**
 
 
-![Corona Tracker Screen Shot5](https://github.com/BrettFlavin/Xamarin_COVID19tracker_App/blob/master/images/Screenshot5.PNG)
+![Corona Tracker Screen Shot5](https://github.com/BrettFlavin/Xamarin_COVID19tracker_App/blob/master/images/Screenshot5.png)
 
 
 
