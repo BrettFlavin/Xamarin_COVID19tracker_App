@@ -55,7 +55,7 @@ Corona Tracker was a simple mobile app project built using C# and Xamarin.Forms 
 
 The API provides a wide range of real-time and up-to-date COVID-19 data to the app for a quick and easy view of COVID-19 totals globally, by state, and by country . The application makes use of a few plugins and NuGet packages to display graphs, check internet connectivity, convert JSON, etc...
 
-![Corona Tracker Screen Shot][CoronaTracker2020-screenshot]
+![Corona Tracker Screen Shot](CoronaTracker-screenshot)
 
 
 <!-- BUILT WITH -->
@@ -75,10 +75,17 @@ This application was created in Visual Studio 2019 using Xamarin.Forms to target
 
 Here are some example screenshots of the application running on an Android device:
 
-![Corona Tracker Screen Shot2][CoronaTracker2020-screenshot2]
-![Corona Tracker Screen Shot3][CoronaTracker2020-screenshot3]
-![Corona Tracker Screen Shot4][CoronaTracker2020-screenshot4]
-![Corona Tracker Screen Shot5][CoronaTracker2020-screenshot5]
+Global totals:
+![Corona Tracker Screen Shot2](CoronaTracker-screenshot2)
+
+State Totals:
+![Corona Tracker Screen Shot3](CoronaTracker-screenshot3)
+
+Country Totals:
+![Corona Tracker Screen Shot4](CoronaTracker-screenshot4)
+
+Country Totals:
+![Corona Tracker Screen Shot5](CoronaTracker-screenshot5)
 
 
 
@@ -142,8 +149,9 @@ Project Link: [https://github.com/BrettFlavin/Xamarin_COVID19tracker_App](https:
 [issues-url]: https://github.com/BrettFlavin/Xamarin_COVID19tracker_App/issues
 [license-shield]: https://img.shields.io/github/license/BrettFlavin/Xamarin_COVID19tracker_App.svg?style=plastic
 [license-url]: https://github.com/BrettFlavin/Xamarin_COVID19tracker_App/blob/master/LICENSE.txt
-[CoronaTracker2020-screenshot]: https://github.com/BrettFlavin/Xamarin_COVID19tracker_App/images/screenshot.png
-[CoronaTracker2020-screenshot2]: https://github.com/BrettFlavin/Xamarin_COVID19tracker_App/images/screenshot2.png
-[CoronaTracker2020-screenshot3]: https://github.com/BrettFlavin/Xamarin_COVID19tracker_App/images/screenshot3.png
-[CoronaTracker2020-screenshot4]: https://github.com/BrettFlavin/Xamarin_COVID19tracker_App/images/screenshot4.png
-[CoronaTracker2020-screenshot5]: https://github.com/BrettFlavin/Xamarin_COVID19tracker_App/images/screenshot5.png
+
+[CoronaTracker-screenshot]: images/screenshot.png
+[CoronaTracker-screenshot2]: images/screenshot2.png
+[CoronaTracker-screenshot3]: images/screenshot3.png
+[CoronaTracker-screenshot4]: images/screenshot4.png
+[CoronaTracker-screenshot5]: images/screenshot5.png
