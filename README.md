@@ -55,7 +55,7 @@ Corona Tracker was a simple mobile app project built using C# and Xamarin.Forms 
 
 The API provides a wide range of real-time and up-to-date COVID-19 data to the app for a quick and easy view of COVID-19 totals globally, by state, and by country . The application makes use of a few plugins and NuGet packages to display graphs, check internet connectivity, convert JSON, etc...
 
-![Corona Tracker Screen Shot](images/CoronaTracker-screenshot)
+![Corona Tracker Screen Shot](https://github.com/BrettFlavin/Xamarin_COVID19tracker_App/blob/master/images/screenshot.PNG)
 
 
 <!-- BUILT WITH -->
@@ -76,16 +76,16 @@ This application was created in Visual Studio 2019 using Xamarin.Forms to target
 Here are some example screenshots of the application running on an Android device:
 
 Global totals:
-![Corona Tracker Screen Shot2](images/CoronaTracker-screenshot2.png)
+![Corona Tracker Screen Shot2](https://github.com/BrettFlavin/Xamarin_COVID19tracker_App/blob/master/images/screenshot2.PNG)
 
 State Totals:
-![Corona Tracker Screen Shot3](images/CoronaTracker-screenshot3.png)
+![Corona Tracker Screen Shot3](https://github.com/BrettFlavin/Xamarin_COVID19tracker_App/blob/master/images/screenshot3.PNG)
 
 Country Totals:
-![Corona Tracker Screen Shot4](images/CoronaTracker-screenshot4.png)
+![Corona Tracker Screen Shot4](https://github.com/BrettFlavin/Xamarin_COVID19tracker_App/blob/master/images/screenshot4.PNG)
 
 Country Totals:
-![Corona Tracker Screen Shot5](images/CoronaTracker-screenshot5.png)
+![Corona Tracker Screen Shot5](https://github.com/BrettFlavin/Xamarin_COVID19tracker_App/blob/master/images/screenshot5.PNG)
 
 
 
