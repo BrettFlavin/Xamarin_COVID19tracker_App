@@ -55,7 +55,7 @@ Corona Tracker was a simple mobile app project built using C# and Xamarin.Forms 
 
 The API provides a wide range of real-time and up-to-date COVID-19 data to the app for a quick and easy view of COVID-19 totals globally, by state, and by country . The application makes use of a few plugins and NuGet packages to display graphs, check internet connectivity, convert JSON, etc...
 
-![Corona Tracker screenshot](https://github.com/BrettFlavin/Xamarin_COVID19tracker_App/blob/master/images/screenshot1.gif)
+![Corona Tracker screenshot](https://github.com/BrettFlavin/Xamarin_COVID19tracker_App/blob/master/screenshot1.gif)
 
 
 <!-- BUILT WITH -->
