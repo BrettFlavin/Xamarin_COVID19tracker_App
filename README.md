@@ -1,20 +1,9 @@
-<!--
-*** Markdown "reference style" links used for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-
-
 <!-- PROJECT SHIELDS -->
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-
-
 
 <!-- PROJECT LOGO -->
 <br />
@@ -32,8 +21,6 @@
   </p>
 </p>
 
-
-
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
@@ -46,16 +33,12 @@
 * [Contact](#contact)
 * [Acknowledgements](#acknowledgements)
 
-
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
 Corona Tracker was a simple mobile app project built using C# and Xamarin.Forms to display the most accurate and up-to-date COVID-19 information available. The application's interface is somewhat basic and will probably be updated in future versions, as the main purpose was to simply consume and display stats from the free API @ [https://corona.lmao.ninja/](https://disease.sh/docs/).
 
-The API provides a wide range of real-time and up-to-date COVID-19 data to the app for a quick and easy view of COVID-19 totals globally, by state, and by country . The application makes use of a few plugins and NuGet packages to display graphs, check internet connectivity, convert JSON, etc...
-
-![Corona Tracker screenshot](https://github.com/BrettFlavin/Xamarin_COVID19tracker_App/blob/master/screenshot1.gif)
+The API provides a wide range of real-time and up-to-date COVID-19 data to the app for a quick and easy view of COVID-19 totals globally, by state, and by country . The application makes use of a few plugins and NuGet packages to display graphs, check internet connectivity, convert JSON, etc.
 
 
 <!-- BUILT WITH -->
@@ -69,37 +52,36 @@ This application was created in Visual Studio 2019 using Xamarin.Forms to target
 * [XAML](https://docs.microsoft.com/en-us/dotnet/desktop-wpf/fundamentals/xaml)
 
 
-
 <!-- USAGE EXAMPLES -->
 ## Usage
 
 Here are some example screenshots of the application running on an Android device:
 
+
+<img src="https://github.com/BrettFlavin/Xamarin_COVID19tracker_App/blob/master/screenshot1.gif" width="50%">
+
+
 **Global totals:**
 
 
-![Corona Tracker Screen Shot2](https://github.com/BrettFlavin/Xamarin_COVID19tracker_App/blob/master/screenshot2.PNG)
-
+<img src="https://github.com/BrettFlavin/Xamarin_COVID19tracker_App/blob/master/screenshot2.PNG" width="40%">
 
 
 **State Totals:**
 
 
-![Corona Tracker Screen Shot3](https://github.com/BrettFlavin/Xamarin_COVID19tracker_App/blob/master/screenshot3.PNG)
-
+<img src="https://github.com/BrettFlavin/Xamarin_COVID19tracker_App/blob/master/screenshot3.PNG" width="40%">
 
 
 **Country Totals:**
 
-![Corona Tracker Screen Shot4](https://github.com/BrettFlavin/Xamarin_COVID19tracker_App/blob/master/screenshot4.PNG)
-
+<img src="https://github.com/BrettFlavin/Xamarin_COVID19tracker_App/blob/master/screenshot4.PNG" width="40%">
 
 
 <!-- ROADMAP -->
 ## Roadmap
 
 See the [open issues](https://github.com/BrettFlavin/Xamarin_COVID19tracker_App/issues) for a list of proposed features (and known issues).
-
 
 
 <!-- CONTRIBUTING -->
@@ -114,12 +96,10 @@ Contributions make the open source community an amazing place to learn, be inspi
 5. Open a Pull Request
 
 
-
 <!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
-
 
 
 <!-- CONTACT -->
@@ -132,7 +112,6 @@ Brett R. Flavin - brettflavin@yahoo.com
 Project Link: [https://github.com/BrettFlavin/Xamarin_COVID19tracker_App](https://github.com/BrettFlavin/Xamarin_COVID19tracker_App)
 
 
-
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 * [Novel Covid API](https://corona.lmao.ninja/)
@@ -140,7 +119,6 @@ Project Link: [https://github.com/BrettFlavin/Xamarin_COVID19tracker_App](https:
 * [NedLanon - microcharts](https://github.com/dotnet-ad/Microcharts)
 * [jamesmontemagno - connectivity plugin](https://github.com/jamesmontemagno/ConnectivityPlugin)
 * [othneildrew - readme template](https://github.com/othneildrew/Best-README-Template)
-
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
